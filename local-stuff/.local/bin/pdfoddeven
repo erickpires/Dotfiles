@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [[ -z $1 ]]; then
+    echo "Please inform the input file."
+    exit 1
+fi
+
+input_file=$1
+base=$(basename "$input_file" ".pdf")
+odd_file="${base}_odd.pdf"
+even_file="${base}_even.pdf"
+
+rand=$(tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c5)
+
+pdfseparate "$input_file" "${rand}_%d.pdf"
+n_files=$(ls -l | grep "${rand}_" | wc -l)
+
+eval pdfunite ${rand}_{1..$n_files..2}.pdf "\"$odd_file\""
+eval pdfunite ${rand}_{2..$n_files..2}.pdf "\"$even_file\""
+
+rm ${rand}_*

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+python $HOME/.config/xob/pulse-volume-watcher.py | xob &
+bash $HOME/.config/xob/backlight-changes.sh | xob &

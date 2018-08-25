@@ -1,0 +1,18 @@
+#!/bin/bash
+
+message="This is a default commit"
+remote="origin"
+branch="master"
+
+if [ $# -gt 0 ]; then
+	message=$1
+fi
+if [ $# -eq 2 ]; then
+	branch=$2
+fi
+if [ $# -eq 3 ]; then
+	remote=$2
+	branch=$3
+fi
+
+git add -A && git commit -m "$message" && git push $remote $branch

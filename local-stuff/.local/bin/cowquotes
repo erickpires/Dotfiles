@@ -1,0 +1,19 @@
+#!/bin/bash
+
+quotes_file=$HOME/.local/share/cowquotes/quotes
+
+n_lines=$(wc -l < ${quotes_file})
+rand_line_index=$(expr $RANDOM % $n_lines + 1)
+rand_line=$(sed -n ${rand_line_index}p "$quotes_file")
+
+tongues=("  " "U " " U" "u " " u" "qp")
+eyes=("**" ".." "OO" "oo" "@@" "--" "xx" "oO" "_o" "TT" "bd" "gg" "zz")
+
+tongue_index=$(expr $RANDOM % ${#tongues[@]})
+eye_index=$(expr $RANDOM % ${#eyes[@]})
+
+tongue="${tongues[tongue_index]}"
+eye="${eyes[eye_index]}"
+
+clear
+cowsay -e "$eye" -T "$tongue" "$rand_line"
