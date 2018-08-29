@@ -1,0 +1,7 @@
+[Unit]
+Description= Updates Google Drive
+
+
+[Service]
+Type=oneshot
+ExecStart=/home/erick/.local/bin/update_gdrive.sh
