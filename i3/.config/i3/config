@@ -161,6 +161,14 @@ for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move d
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="mpv"] floating enable
 
+assign [class="Firefox"] 1
+assign [class="Emacs"] 2
+assign [class="TelegramDesktop"] 3
+assign [class="Whatsie"] 3
+assign [class="Thunderbird"] 4
+assign [class="Spotify"] 5
+
+
 exec --no-startup-id compton -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id $HOME/.local/bin/xob-displays
@@ -184,6 +192,7 @@ exec --no-startup-id ~/.local/bin/random-wallpaper.sh
 workspace_layout tabbed
 
 bindsym $mod+l exec sh ~/.i3/i3lock.sh
+bindsym $mod+k exec keepmenu
 bindsym Print exec teiler
 bindsym Control+Mod1+Delete exec $HOME/.local/bin/rofi-shutdown.sh
 
