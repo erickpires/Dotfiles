@@ -57,6 +57,7 @@ master=alsa_output.pci-0000_00_1b.0.analog-stereo channels=2
 channel_map=mono,mono"
 alias subtitle='subdl --lang=pob --download=best-rating --username erick-pires --password erick123456'
 alias journal-vacuum='sudo journalctl --vacuum-time=2d'
+alias magit='emacsclient -nw -e \(magit-status\)'
 
 eval $(thefuck --alias)
 
