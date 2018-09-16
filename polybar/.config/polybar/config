@@ -218,14 +218,16 @@ accumulate-stats = true
 interface        = enp7s0
 interval         = 1.0
 
-format-connected               =  <label-connected>; 
-format-connected-foreground    = ${colors.colour_blu}
-format-disconnected            =  <label-disconnected>
-format-disconnected-foreground = ${colors.colour_blu}
-label-connected                = %ifname%
-label-connected-foreground     = ${colors.foreground}
-label-disconnected             = Disconnected
-label-disconnected-foreground  = #66
+format-connected-prefix             = "  "
+format-connected-prefix-foreground  = ${colors.colour_blu}
+format-connected                    = Connected
+format-connected-foreground         = ${colors.foreground}
+format-disconnected                 =  <label-disconnected>
+format-disconnected-foreground      = ${colors.colour_blu}
+label-connected                     = %ifname%
+label-connected-foreground          = ${colors.foreground}
+label-disconnected                  = Disconnected
+label-disconnected-foreground       = #66
 
 [module/volume]
 type = internal/alsa
