@@ -169,7 +169,7 @@ assign [class="Thunderbird"] 4
 assign [class="Spotify"] 5
 
 # Dual monitor
-exec --no-startup-id xrandr --output VGA1 --auto --right-of LVDS1
+# exec --no-startup-id xrandr --output VGA1 --auto --right-of LVDS1
 
 exec --no-startup-id compton -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
