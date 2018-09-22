@@ -181,8 +181,8 @@ exec --no-startup-id xinput --set-prop 14 294 1
 exec --no-startup-id xset r rate 200 70
 
 exec --no-startup-id xset b off # No beep
-exec --no-startup-id xinput set-prop 15 298 1 # Tap to click
-exec --no-startup-id xinput set-prop 15 299 1 # Tap to click
+exec --no-startup-id xinput set-prop 13 281 1 # Tap to click
+# exec --no-startup-id xinput set-prop 15 299 1 # Tap to click
 
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
