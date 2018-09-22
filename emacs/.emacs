@@ -41,7 +41,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (auto-package-update ivy-rich swiper counsel eclim deadgrep avy org-bullets vlf auto-sudoedit circe multi-term tldr multi-web-mode batch-mode auctex color-theme-sanityinc-tomorrow color-theme-tango arjen-grey-theme smart-cursor-color zenburn-theme color-theme-zenburn zenburn irony-eldoc smart-mode-line-powerline-theme smart-mode-line company-jedi toml-mode move-text multiple-cursors hungry-delete neotree ag realgud company-irony-c-headers markdown-mode centered-cursor-mode expand-region elpy monokai-theme smart-compile company cargo racer rust-mode auto-complete)))
+    (hideshowvis auto-package-update ivy-rich swiper counsel eclim deadgrep avy org-bullets vlf auto-sudoedit circe multi-term tldr multi-web-mode batch-mode auctex color-theme-sanityinc-tomorrow color-theme-tango arjen-grey-theme smart-cursor-color zenburn-theme color-theme-zenburn zenburn irony-eldoc smart-mode-line-powerline-theme smart-mode-line company-jedi toml-mode move-text multiple-cursors hungry-delete neotree ag realgud company-irony-c-headers markdown-mode centered-cursor-mode expand-region elpy monokai-theme smart-compile company cargo racer rust-mode auto-complete)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(save-place t)
@@ -303,6 +303,14 @@ With argument, do this that many times."
 ;; Clean whitespace when saving
 ;;
 (add-hook 'before-save-hook #'whitespace-cleanup)
+
+
+;;
+;; Hide / Show
+;;
+(add-hook 'prog-mode-hook 'hideshowvis-enable)
+(define-key prog-mode-map (kbd "C-c C-d") #'hs-hide-block)
+(define-key prog-mode-map (kbd "C-c C-s") #'hs-show-block)
 
 ;;
 ;; Highlight especial words
