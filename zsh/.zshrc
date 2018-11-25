@@ -59,6 +59,8 @@ alias subtitle='subdl --lang=pob --download=best-rating --username erick-pires -
 alias journal-vacuum='sudo journalctl --vacuum-time=2d'
 alias magit='emacsclient -nw -e \(magit-status\)'
 
+alias mpv-windowed='mpv --geometry=568x320+1345+10'
+
 eval $(thefuck --alias)
 
 # alias novo-aluno='ssh operador@petropolis.dcc.ufrj.br -p 22022 novoAluno'
