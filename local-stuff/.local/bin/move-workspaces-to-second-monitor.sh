@@ -1,6 +1,6 @@
 #!/bin/bash
 
-xrandr --output VGA1 --auto --right-of LVDS1
+xrandr --output HDMI1 --auto --right-of LVDS1
 random-wallpaper.sh
 
 i3-msg "workspace 6, move workspace to output VGA1"
