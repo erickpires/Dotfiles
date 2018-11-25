@@ -190,6 +190,8 @@ exec --no-startup-id xset s noblank
 exec --no-startup-id nm-applet
 exec --no-startup-id ~/.local/bin/random-wallpaper.sh
 
+exec --no-startup-id i3-battery-popup -n -L 15 -l 10 -t 1m -m "Bateria acabando!"
+
 workspace_layout tabbed
 
 bindsym $mod+l exec sh ~/.i3/i3lock.sh
