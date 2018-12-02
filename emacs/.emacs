@@ -196,10 +196,7 @@ With argument, do this that many times."
              :custom
              (ivy-virtual-abbreviate 'full
                                      ivy-rich-switch-buffer-align-virtual-buffer t
-                                     ivy-rich-path-style 'abbrev)
-             :config
-             (ivy-set-display-transformer 'ivy-switch-buffer
-                                          'ivy-rich-switch-buffer-transformer))
+                                     ivy-rich-path-style 'abbrev))
 
 (use-package swiper
              :after ivy
